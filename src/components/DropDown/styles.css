@@ -1,16 +1,17 @@
 #dropdown-component {
+    display: flex;
     cursor: pointer;
     overflow: hidden;
-    margin-top: 0.95vh;
-    margin-left: -2vw;
+    margin-top: 0.5vh;
+    padding-right: 4px;
 }
 
 #dropdown-component .button,
 #dropdown-component .menu-item  {
     display: flex;
     align-items: center;
+    gap: 14px;
     justify-content: space-between;
-    gap: 5px;
     background: none;
     border: none;
     font-family: var(--title-font);
@@ -21,6 +22,11 @@
     font-size: 10px;
     cursor: pointer;
     transition: 0.1s;
+}
+
+#dropdown-component .button span {
+    margin-right: -18px;
+    margin-top: 2px;
 }
 
 #dropdown-component .button .selected {
@@ -46,25 +52,40 @@
     transition: opacity 0.5s;
 }
 
+#dropdown-component .menu-item a {
+    text-decoration: none;
+    color: var(--color-2);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
 #dropdown-component .menu-item:hover {
-    opacity: 60%;
+    opacity: 0.6;
 }
 
 @media (min-width: 1080px) {
 
     #dropdown-component {
-        margin-top: 0vh;
+        margin-top: 0.9vh;
         margin-left: -0.5vw;
+        padding-right: 24px;
     }
 
     #dropdown-component .button {
         font-size: 20px;
+        gap: 0px;
     }
 
     #dropdown-component .button .selected {
         margin-top: 5px;
         height: 20px;
         width: 20px;
+    }
+
+    #dropdown-component .button span {
+        margin-right: 0px;
+        margin-top: 2   px;
     }
     
     #dropdown-component .button .icon {

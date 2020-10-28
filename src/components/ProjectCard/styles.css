@@ -16,7 +16,7 @@
 
 .normal {
     border: var(--color-3) 0.2px;
-    border-style: dashed;
+    border-style: solid;
     box-shadow: var(--color-10) 4px 2px 6px;
 }
 
@@ -24,11 +24,6 @@
     transform: translateY(-5px);
     box-shadow: var(--color-10) 5px 3px 7px;
     border-style: solid;
-    opacity: 100%;
-}
-
-.spotlight:hover {
-    transform: scale(1);
 }
 
 .hidden {
@@ -78,64 +73,43 @@
     height: 148px;
     overflow: hidden;
     margin-top: -14px;
-}
-
-#projectcard-component div.content a {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    align-self: center;
-    justify-content: center;
-    text-decoration: none;
-    font-family: var(--title-font);
-    color: var(--color-9);
-    background-color: var(--color-3);
-    text-align: center;
-    padding: 10px;
-    transition: opacity 0.5s;
-    max-width: 24vw;
-    height: 28px;
-    font-size: 16px;
-    border-radius: 30px;
-}
-
-#projectcard-component div.content a:hover {
-    opacity: 80%;
+    text-align: justify;
 }
 
 @media (min-width: 1080px) {
     #projectcard-component {
-        width: 500px;
-        height: 510px;
+        flex-direction: row;
+        width: 56vw;
+        height: 450px;
         margin-bottom: 12px;
+        margin-top: -32px;
     }
 
     #projectcard-component .img-content {
         width: 510px;
+        height: 490px;
     }
 
     #projectcard-component img {
-        width: 360px;
+        width: 400px;
         max-height: 250px;
+    }
+
+    #projectcard-component div.content {
+        gap: 5px;
     }
 
     #projectcard-component div.content p {
         line-height: 30px;
-        font-size: 18px;
+        font-size: 16px;
+        align-self: center;
         width: 360px;
         margin-top: -15px;
+        height: 205px;
     }
 
     #projectcard-component div.content h3 {
         font-size: 32px;
         margin-top: 10px;
-    }
- 
-    #projectcard-component div.content a {
-        display: flex;
-        width: 9vw;
-        height: 28px;
-        font-size: 18px;
-        text-align: center;
     }
 }

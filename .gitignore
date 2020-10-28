@@ -12,6 +12,7 @@ lib-cov
 
 # Tokens
 GITHUB-TOKEN.*
+.env.*
 
 # Coverage directory used by tools like istanbul
 coverage

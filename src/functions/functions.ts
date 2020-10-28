@@ -17,28 +17,25 @@ export function mouseMonitoring() {
 
     window.addEventListener('mousemove', (event) => {
         var pos = event.clientY;
-        if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 64 && window.innerWidth > 1080))) {
-        header.style.position = "fixed";
-        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "56px";
+        if (scroll > 380 && ((pos >= 0 && pos < 100 && window.innerWidth < 1080) || (pos >= 0 && pos < 140 && window.innerWidth > 1080))) {
+          header.style.position = "fixed";
+          main.style.marginTop = window.innerWidth < 1080 ? "76px" : "101px";
         } else {
-        header.style.position = "relative";
-        main.style.marginTop = "0px";    
+          header.style.position = "relative";
+          main.style.marginTop = "0px";    
         }
     })
 }
 
-export function moveRight(array, len, index) {
-    if (array[index] == len - 1) {
-        array[index] = 0;
-      } else {
-        array[index]++;
-      }
-}
+export function hasEventsMonth(events: any[]) {
+    
+  for (let index = 0; index < events.length; index++) {
+    const element = events[index]; 
 
-export function moveLeft(array, len, index) {
-    if (array[index] == 0) {
-        array[index] = len - 1;
-      } else {
-        array[index]--;
-      }
+    if (Number(element.month) == new Date().getMonth() + 1) {
+      return true;
+    }
+  }    
+
+  return false;
 }

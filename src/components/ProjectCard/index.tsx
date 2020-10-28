@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkButton from '../LinkButton';
 
 import './styles.css'
 
@@ -9,8 +10,9 @@ interface Properties {
     href: string;
     type: string;
     color?: string;
+    buttonText: string;
 }
-const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, type, color}) => {
+const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, type, color, buttonText}) => {
   
   const DEFAULT_COLOR = "#fff6f3";
 
@@ -29,9 +31,10 @@ const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, t
         <p>
           {description}
         </p>
-        <a target="_blank" href={href}>
-          <span>Conferir</span>
-        </a>
+        <LinkButton
+        href={href}
+        title={buttonText}
+        />
       </div>
     </div>
   );

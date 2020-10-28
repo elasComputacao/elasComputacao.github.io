@@ -4,7 +4,7 @@ import GITHUBTOKEN from "../GITHUB-TOKEN";
 export async function getUsersFromGitHub() {
     const octokit = new Octokit(
         {
-          auth: GITHUBTOKEN,
+          auth: "",
           baseUrl: 'https://api.github.com',
         }
       );
